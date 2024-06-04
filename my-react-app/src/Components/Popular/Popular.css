@@ -1,0 +1,57 @@
+.popular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: auto; /* Set height to auto */
+    overflow: hidden; /* Hide overflow */
+}
+
+.popular h1 {
+    color: #171717;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.popular hr {
+    width: 200px;
+    height: 6px;
+    border-radius: 10px;
+    background: #252525;
+}
+
+.popular-item {
+    margin-top: 50px;
+    display: flex;
+    gap: 20px; /* Adjust gap as needed */
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    width: calc(100% - 40px); /* Adjust the width of the container */
+    padding: 20px 0; /* Optional: Add padding to the container */
+}
+
+.popular-item .item {
+    flex: 0 0 auto; /* Disable flex-grow to prevent items from stretching */
+    max-width: 350px; /* Ensure items do not exceed 350px in width */
+    width: 100%; /* Make each item take up the full width of its flex container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+/* Modify scrollbar track */
+.popular-item::-webkit-scrollbar {
+    height: 8px; /* Set height of the horizontal scrollbar */
+}
+
+/* Modify scrollbar thumb */
+.popular-item::-webkit-scrollbar-thumb {
+    background-color: #4a4a4a; /* Dark gray */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Modify scrollbar track when mouse hovers over it */
+.popular-item::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darker gray */
+}
+
+/* Modify scrollbar button (arrows) */
+.popular-item::-webkit-scrollbar-button {
+    display: none; /* Hide scrollbar buttons */
+}

@@ -1,0 +1,44 @@
+.new-collections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: auto;
+    margin-top: 240px;
+    margin-bottom: 100px;
+}
+
+.new-collections h1 {
+    color: #171717;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.new-collections hr {
+    width: 200px;
+    height: 6px;
+    border-radius: 10px;
+    background: #252525;
+}
+
+.collections {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns per row */
+    width: 100%; /* Ensure the container takes full width */
+    max-width: 1200px; /* Optional: set a max-width if needed */
+    margin-top: 50px;
+    gap: 30px;
+}
+
+.item-wrapper {
+    box-sizing: border-box;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Ensure items take full width of grid column */
+    box-sizing: border-box; /* Include padding and border in width */
+}
