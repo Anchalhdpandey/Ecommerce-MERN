@@ -1,22 +1,33 @@
-body{
+body {
     font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-}
-.navbar{
-    display:flex;
-    justify-content:space-around;
-    padding: 12px;
-    box-shadow: 0 1px 3px -2px black;
-}
-.nav-menu{
-    display: flex;
-    align-items:center;
-    list-style: none;
-    gap:50px;
-    font-size: 14px;
-    font-weight: 200;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-.nav-menu li{
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 12px;
+    box-shadow: 0 1px 3px -2px black;
+    max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap; /* Allow items to wrap if they overflow */
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+    font-size: 14px;
+    font-weight: 200;
+    flex-wrap: wrap; /* Ensure items wrap within the container */
+}
+
+.nav-menu li {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -25,44 +36,67 @@ body{
     cursor: pointer;
 }
 
-.nav-login-cart{
+.nav-login-cart {
     display: flex;
     align-items: center;
     gap: 45px;
 }
 
-.nav-login-cart button{
+.nav-login-cart button {
     width: 125px;
-    height:50px;
-    outline:none;
+    height: 50px;
+    outline: none;
     border: 1px solid rgb(182, 176, 176);
     color: white;
     background-color: #FF3F6C;
     font-size: 15px;
     border-radius: 55px;
-    cursor:pointer;
+    cursor: pointer;
     font-weight: bold;
 }
 
-.nav-login-cart button:active{
-    background:#ce3a5d;
-    cursor:pointer ;
+.nav-login-cart button:active {
+    background: #ce3a5d;
+    cursor: pointer;
 }
-.nav-cart-count{
-    width:22px;
-    height:22px;
+
+.nav-cart-count {
+    width: 22px;
+    height: 22px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: -35px;
-    margin-left:-55px;
+    margin-left: -55px;
     border-radius: 11px;
     font-size: 14px;
     background: rgb(235, 22, 61);
     color: white;
 }
 
-.nav-menu hr{
+.nav-menu hr {
     border: 2px solid #FF3F6C;
     width: 47px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-menu {
+        gap: 20px; /* Reduce gap on smaller screens */
+        font-size: 12px; /* Adjust font size */
+    }
+
+    .nav-login-cart {
+        gap: 20px; /* Reduce gap */
+    }
+
+    .nav-login-cart button {
+        width: 100px;
+        height: 40px;
+        font-size: 13px; /* Adjust button size */
+    }
+
+    .nav-cart-count {
+        margin-left: -35px; /* Adjust positioning */
+    }
 }
