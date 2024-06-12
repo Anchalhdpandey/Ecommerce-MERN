@@ -31,3 +31,52 @@
     border: 1px solid #ccc; /* Optional: Add a border for better visibility */
     border-radius: 10px; /* Optional: Add rounded corners */
 }
+
+@media (max-width: 1200px) {
+    .relatedproducts h1 {
+        font-size: 40px;
+    }
+    .relatedproducts-item {
+        gap: 20px;
+    }
+    .relatedproducts-item img {
+        width: 180px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .relatedproducts h1 {
+        font-size: 35px;
+    }
+    .relatedproducts-item {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .relatedproducts-item img {
+        width: 150px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .relatedproducts {
+        height: auto; /* Adjust height to auto */
+    }
+    .relatedproducts h1 {
+        font-size: 30px;
+    }
+    .relatedproducts hr {
+        width: 150px;
+        height: 4px;
+    }
+    .relatedproducts-item {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .relatedproducts-item img {
+        width: 120px;
+    }
+}

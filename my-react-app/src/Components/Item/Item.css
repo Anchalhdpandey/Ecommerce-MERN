@@ -30,3 +30,40 @@
     transform: scale(1.05);
     transition: 0.6s;
 }
+
+
+@media (max-width: 1200px) {
+    .item {
+        max-width: 300px; /* Adjust max width for large screens */
+    }
+    .item-price-new, .item-price-old {
+        font-size: 16px; /* Adjust font size for prices */
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .item {
+        max-width: 250px; /* Adjust max width for tablets */
+    }
+    .item-price-new, .item-price-old {
+        font-size: 14px; /* Adjust font size for prices */
+    }
+    .item-prices {
+        gap: 15px; /* Reduce gap between prices */
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .item {
+        max-width: 100%; /* Ensure item takes full width on mobile */
+    }
+    .item-price-new, .item-price-old {
+        font-size: 12px; /* Adjust font size for prices */
+    }
+    .item-prices {
+        gap: 10px; /* Further reduce gap between prices */
+        flex-direction: column; /* Stack prices vertically */
+    }
+}

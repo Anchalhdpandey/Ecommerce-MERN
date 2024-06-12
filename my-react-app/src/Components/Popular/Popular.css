@@ -55,3 +55,53 @@
 .popular-item::-webkit-scrollbar-button {
     display: none; /* Hide scrollbar buttons */
 }
+
+@media (max-width: 1200px) {
+    .popular h1 {
+        font-size: 40px;
+    }
+    .popular hr {
+        width: 180px;
+        height: 5px;
+    }
+    .popular-item {
+        gap: 15px;
+    }
+    .popular-item .item {
+        max-width: 300px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .popular h1 {
+        font-size: 35px;
+    }
+    .popular hr {
+        width: 160px;
+        height: 4px;
+    }
+    .popular-item {
+        gap: 10px;
+    }
+    .popular-item .item {
+        max-width: 250px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .popular h1 {
+        font-size: 30px;
+    }
+    .popular hr {
+        width: 140px;
+        height: 3px;
+    }
+    .popular-item {
+        gap: 5px;
+    }
+    .popular-item .item {
+        max-width: 200px;
+    }
+}
